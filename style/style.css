@@ -1,0 +1,413 @@
+:root {
+  --bg: white;
+  --primary: #050340;
+  --secondary: #e5e510;
+  --h2:#0e09a4;
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins";
+  background-color: var(--bg);
+  color: var(--primary);
+  max-width: 100%;
+  height: 3000px;
+}
+
+/* navbar */
+#menu {
+  display: none;
+}
+.navbar-extra a {
+  color: var(--bg);
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 8%;
+  padding-bottom: 0.5rem;
+  z-index: 9999;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color;
+  position: fixed;
+  transition:all 0.3s ease;
+}
+.navbar .logo {
+  color: white;
+  margin-right: auto;
+}
+.navbar .navbar-nav a {
+  padding: 1.5rem;
+  display: inline-block;
+  color:white;
+  font-size: 1.3rem;
+}
+
+.navbar.scrolling-active {
+  background-color: var(--primary);
+  padding: 0.8rem 8%;
+}
+
+.navbar .navbar-nav ::after {
+  content: "";
+  display: block;
+  border-bottom: 0.2rem solid var(--secondary);
+  transform: scaleX(0);
+  transition: 0.2s;
+}
+
+.navbar .navbar-nav a:hover::after {
+  display: block;
+  transform: scaleX(1);
+  width: 100%;
+}
+/* Profil */
+.profil {
+  background-image:linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)) ,url(https://miro.medium.com/v2/resize:fit:1024/1*kveavuUXvLQyMBL1no9l3Q.jpeg);
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position: center;
+  position: relative;
+  padding: 11rem 13% 0rem 13%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.profil .img {
+  margin-right: 2rem;
+  margin-bottom: 3rem;
+}
+.profil .text{
+  margin-right: auto;
+  margin-bottom: 3rem;
+  text-align: left;
+  display: block;
+}
+.profil .text h1 {
+  color:var(--secondary);
+  font-weight: 800;
+  margin-top: 1rem;
+  font-size:6rem;
+
+}
+.profil .text p {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  color: white;
+  line-height: 1.4;
+  
+}
+
+.profil .img img {
+  width:40vh ;
+  border-radius: 3rem;
+}
+
+/* About */
+.about, .portfolio {
+padding: 10rem 7% 1.5rem;
+}
+
+.about .konten{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap:wrap ;
+}
+.about .text span {
+  color: var(--h2);
+}
+.about .text {
+padding: 2rem;
+background-color: var(--secondary); 
+border-radius:0.8rem; 
+}
+.about .text p {
+  max-width:70rem;
+}
+.about img {
+  position: relative; 
+  width: 20rem;
+  border-radius: 50%;
+}
+
+/* Portfolio */
+.portfolio h2,.contact h2,.about h2{
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: var(--primary);
+}
+.portfolio h2 span, .contact h2 span,.about h2 span {
+  color:var(--h2)
+}
+
+.portfolio p {
+  text-align: center;
+  padding-bottom: 2rem;
+}
+    /* Fotografi */
+.row {
+  background-color: var(--secondary);
+  border-radius:0.8rem;
+  padding: 2rem 1rem;
+}
+.photography{ 
+ display: flex;
+  align-items: center;
+  flex-wrap: wrap;  
+  justify-content:space-around;
+}
+.row h3{
+  text-align: center;
+  font-size: 2rem;
+  padding:2rem 0rem;
+}
+.tombol {
+  display: flex;
+  justify-content: center;
+}
+.cta {
+ margin-top: 1rem;
+ background-color: var(--primary);
+ color: #fff;
+ padding: 1rem 3rem;
+ border-radius: 0.5rem;
+}
+    /* Videografi */
+.row2{
+  padding: 10rem;
+}
+.row2 h3 {
+  text-align: center;
+  font-size: 2rem;
+  padding:2rem 0rem;
+}
+.row2 p span {
+  text-align: center;
+  font-size: 1.5rem;
+  padding:2rem 1rem;
+  color: var(--h2);
+}
+
+.video1{
+width: 100%;
+height: 0;
+padding-bottom: 56.25%;
+position: relative;
+
+}
+.video2 {
+  padding-top: 2rem;
+  width: 100%;
+
+  
+}
+.video1  iframe{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+ 
+}
+.video2 iframe {
+  position:relative;
+  width: 100%;
+  
+
+}
+
+/* contact */
+.contact{
+  padding: 5rem 20% 10rem 20% ; 
+}
+
+
+.kolom {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.tombol-cv {
+  background-color: var(--primary);
+  border-radius: 1rem;
+  padding: 1rem 2rem 1rem 2rem;
+  text-align: center;
+}
+.tombol-cv a {
+  color: var(--secondary);
+  font-size: small;
+  
+}
+.input-group a {
+font-weight: 800;
+color:#4173cb;
+}
+
+
+.input-group {
+ padding: 1rem 2rem 1rem 2rem;
+
+}
+
+
+
+/* Footer */
+.footer {
+  background-color: var(--primary);
+  padding: 2rem 15% 1.5rem;
+  font-size: large;
+  
+}
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  padding-bottom:2.5rem;
+}
+
+.social{
+  color: var(--secondary);
+  flex-wrap: wrap;
+}
+.copyright {
+  display: flex;
+  justify-content: center;
+  color: var(--secondary);
+
+}
+
+.kapabilitas {
+  display: block;
+}
+.copyright p {
+  font-size: 1.9vh;
+}
+.social h2,.kapabilitas h2{
+  padding: 1rem 0rem;
+  color: var(--secondary);
+}
+.social a,.kapabilitas a   {
+  color: var(--bg);
+}
+.logo-ig,.logo-github {
+  display: flex;
+}
+
+.logo {
+  margin-right: 1rem;
+}
+
+
+
+
+
+/* media query */
+@media (max-width: 758px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+  }
+  html {
+    font-size: 62.5%;
+  }
+  #menu {
+    display:inline-block
+  }
+  .navbar {
+    background-color:var(--primary);
+  }
+
+  .navbar .navbar-nav {
+    flex-direction: column;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    background-color:var(--primary);
+    border-radius: ;
+    left:0%; 
+    top: 100%;
+    width: 100%;
+    opacity: 0%;
+    transition: all 0.3s ease;
+  }
+  .navbar-nav.active {
+    height: 250px;
+    background-color:var(--primary);
+    border-radius: ;
+    width: 100%;
+    opacity: 100%;
+  }
+ 
+  .navbar .navbar-nav a {
+    font-size: 1.3rem;
+    display: block;
+  }
+  .navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+    transform: scaleY(0);
+    transform: scaleX(0);
+  }
+  .navbar .navbar-nav a:hover:after {
+    display: flex;
+    transform: scaleY(1);
+    transform: scaleX(1);
+    transform-origin: 0 0;
+    transition: 0.2s;
+  }
+  .profil {
+    display: flex;
+    justify-content: center;
+  }
+  .row {
+  font-size: 1.5rem;
+  }
+  .about .konten .text  {
+    order:2;
+  }
+  .about .konten img {
+    margin: 4rem 0;
+    order:1
+  }
+  /* ISI */
+
+
+  /* footer */
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+
+  }
+  .social {
+    padding-right: 3.5rem;
+  }
+  .copyright {
+    max-width: 50vh;
+    
+  }
+  .copyright p {
+    font-size: 1.2rem;
+  }
+
+  
+}
